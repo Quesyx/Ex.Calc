@@ -1,0 +1,12 @@
+/home/quesyx/Work/src/Ex.Calc/CalcLib/bin/Debug/net5.0/CalcLib.deps.json
+/home/quesyx/Work/src/Ex.Calc/CalcLib/bin/Debug/net5.0/CalcLib.dll
+/home/quesyx/Work/src/Ex.Calc/CalcLib/bin/Debug/net5.0/ref/CalcLib.dll
+/home/quesyx/Work/src/Ex.Calc/CalcLib/bin/Debug/net5.0/CalcLib.pdb
+/home/quesyx/Work/src/Ex.Calc/CalcLib/obj/Debug/net5.0/CalcLib.csproj.AssemblyReference.cache
+/home/quesyx/Work/src/Ex.Calc/CalcLib/obj/Debug/net5.0/CalcLib.GeneratedMSBuildEditorConfig.editorconfig
+/home/quesyx/Work/src/Ex.Calc/CalcLib/obj/Debug/net5.0/CalcLib.AssemblyInfoInputs.cache
+/home/quesyx/Work/src/Ex.Calc/CalcLib/obj/Debug/net5.0/CalcLib.AssemblyInfo.cs
+/home/quesyx/Work/src/Ex.Calc/CalcLib/obj/Debug/net5.0/CalcLib.csproj.CoreCompileInputs.cache
+/home/quesyx/Work/src/Ex.Calc/CalcLib/obj/Debug/net5.0/CalcLib.dll
+/home/quesyx/Work/src/Ex.Calc/CalcLib/obj/Debug/net5.0/ref/CalcLib.dll
+/home/quesyx/Work/src/Ex.Calc/CalcLib/obj/Debug/net5.0/CalcLib.pdb

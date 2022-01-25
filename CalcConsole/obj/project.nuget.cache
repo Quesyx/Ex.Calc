@@ -1,0 +1,10 @@
+{
+  "version": 2,
+  "dgSpecHash": "KlXm8T63hDl0XVZQmG2YzxOvbnesnFjfCC4DVNJLIb2p+eLDIta7HxQqbbRK7iC5BUl8SSIu5LUZhgDJrCJUdQ==",
+  "success": true,
+  "projectFilePath": "/home/quesyx/Work/src/Ex.Calc/CalcConsole/CalcConsole.csproj",
+  "expectedPackageFiles": [
+    "/home/quesyx/.nuget/packages/nunit3testadapter/4.2.1/nunit3testadapter.4.2.1.nupkg.sha512"
+  ],
+  "logs": []
+}

@@ -1,0 +1,36 @@
+{
+  "runtimeTarget": {
+    "name": ".NETCoreApp,Version=v5.0",
+    "signature": ""
+  },
+  "compilationOptions": {},
+  "targets": {
+    ".NETCoreApp,Version=v5.0": {
+      "CalcConsole/1.0.0": {
+        "dependencies": {
+          "CalcLib": "1.0.0"
+        },
+        "runtime": {
+          "CalcConsole.dll": {}
+        }
+      },
+      "CalcLib/1.0.0": {
+        "runtime": {
+          "CalcLib.dll": {}
+        }
+      }
+    }
+  },
+  "libraries": {
+    "CalcConsole/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "CalcLib/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    }
+  }
+}
