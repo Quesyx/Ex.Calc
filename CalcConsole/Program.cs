@@ -54,7 +54,7 @@ namespace CalcConsole
                             }
                             break;
                         case "s":
-                            Console.WriteLine("Корен({0})={1}", firstNum, calc.Koren(firstNum));
+                            Console.WriteLine("Корень({0})={1}", firstNum, calc.SquareRoot(firstNum));
                             break;
                         default:
                             Console.WriteLine("Ошибка, Некорректное действие!");

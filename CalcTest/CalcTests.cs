@@ -2,7 +2,7 @@ using NUnit.Framework;
 using CalcLib;
 namespace CalcTest
 {
-[TestFixture]
+    [TestFixture]
     public class CalcTests
     {
         [TestCase(5, 7, 12)]
@@ -63,9 +63,9 @@ namespace CalcTest
         {
             var calc = new CalcActions();
 
-            double actual = calc.Koren(d);
+            double actual = calc.SquareRoot(d);
 
             Assert.AreEqual(expected, actual);
         }
     }
-    }
+}
