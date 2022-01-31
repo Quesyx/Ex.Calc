@@ -8,6 +8,19 @@
           "build/netcoreapp2.1/NUnit3TestAdapter.props": {}
         }
       },
+      "CalcDiv/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v5.0",
+        "dependencies": {
+          "IOperationCalc": "1.0.0"
+        },
+        "compile": {
+          "bin/placeholder/CalcDiv.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/CalcDiv.dll": {}
+        }
+      },
       "CalcLib/1.0.0": {
         "type": "project",
         "framework": ".NETCoreApp,Version=v5.0",
@@ -16,6 +29,16 @@
         },
         "runtime": {
           "bin/placeholder/CalcLib.dll": {}
+        }
+      },
+      "IOperationCalc/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v5.0",
+        "compile": {
+          "bin/placeholder/IOperationCalc.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/IOperationCalc.dll": {}
         }
       }
     }
@@ -46,14 +69,25 @@
         "nunit3testadapter.nuspec"
       ]
     },
+    "CalcDiv/1.0.0": {
+      "type": "project",
+      "path": "../CalcDiv/CalcDiv.csproj",
+      "msbuildProject": "../CalcDiv/CalcDiv.csproj"
+    },
     "CalcLib/1.0.0": {
       "type": "project",
       "path": "../CalcLib/CalcLib.csproj",
       "msbuildProject": "../CalcLib/CalcLib.csproj"
+    },
+    "IOperationCalc/1.0.0": {
+      "type": "project",
+      "path": "../IOperationCalc/IOperationCalc.csproj",
+      "msbuildProject": "../IOperationCalc/IOperationCalc.csproj"
     }
   },
   "projectFileDependencyGroups": {
     "net5.0": [
+      "CalcDiv >= 1.0.0",
       "CalcLib >= 1.0.0",
       "NUnit3TestAdapter >= 4.2.1"
     ]
@@ -83,6 +117,9 @@
         "net5.0": {
           "targetAlias": "net5.0",
           "projectReferences": {
+            "/home/quesyx/Work/src/Ex.Calc/CalcDiv/CalcDiv.csproj": {
+              "projectPath": "/home/quesyx/Work/src/Ex.Calc/CalcDiv/CalcDiv.csproj"
+            },
             "/home/quesyx/Work/src/Ex.Calc/CalcLib/CalcLib.csproj": {
               "projectPath": "/home/quesyx/Work/src/Ex.Calc/CalcLib/CalcLib.csproj"
             }

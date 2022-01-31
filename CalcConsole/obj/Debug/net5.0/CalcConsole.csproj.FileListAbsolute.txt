@@ -17,3 +17,13 @@
 /home/quesyx/Work/src/Ex.Calc/CalcConsole/obj/Debug/net5.0/ref/CalcConsole.dll
 /home/quesyx/Work/src/Ex.Calc/CalcConsole/obj/Debug/net5.0/CalcConsole.pdb
 /home/quesyx/Work/src/Ex.Calc/CalcConsole/obj/Debug/net5.0/CalcConsole.genruntimeconfig.cache
+/home/quesyx/Work/src/Ex.Calc/CalcConsole/bin/Debug/net5.0/NUnit3.TestAdapter.dll
+/home/quesyx/Work/src/Ex.Calc/CalcConsole/bin/Debug/net5.0/NUnit3.TestAdapter.pdb
+/home/quesyx/Work/src/Ex.Calc/CalcConsole/bin/Debug/net5.0/nunit.engine.dll
+/home/quesyx/Work/src/Ex.Calc/CalcConsole/bin/Debug/net5.0/nunit.engine.api.dll
+/home/quesyx/Work/src/Ex.Calc/CalcConsole/bin/Debug/net5.0/nunit.engine.core.dll
+/home/quesyx/Work/src/Ex.Calc/CalcConsole/bin/Debug/net5.0/testcentric.engine.metadata.dll
+/home/quesyx/Work/src/Ex.Calc/CalcConsole/bin/Debug/net5.0/CalcDiv.dll
+/home/quesyx/Work/src/Ex.Calc/CalcConsole/bin/Debug/net5.0/IOperationCalc.dll
+/home/quesyx/Work/src/Ex.Calc/CalcConsole/bin/Debug/net5.0/CalcDiv.pdb
+/home/quesyx/Work/src/Ex.Calc/CalcConsole/bin/Debug/net5.0/IOperationCalc.pdb
