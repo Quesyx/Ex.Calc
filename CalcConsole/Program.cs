@@ -34,6 +34,8 @@ namespace CalcConsole
                     }
                     var calc = new CalcActions();
                     var calcDiv = new Div();
+                    calcDiv.firstNum=firstNum;
+                    calcDiv.secondNum=secondNum;
                     switch (action)
                     {
                         case "+":
@@ -50,7 +52,7 @@ namespace CalcConsole
                             {
                                 if (secondNum == 0)
                                     throw new DivideByZeroException();
-                                Console.WriteLine("{0}/{1}={2}", firstNum, secondNum, calcDiv.Evaluate(firstNum, secondNum));
+                                Console.WriteLine("{0}/{1}={2}", calcDiv.firstNum, calcDiv.secondNum, calcDiv.Evaluate());
                             }
                             catch (DivideByZeroException)
                             {

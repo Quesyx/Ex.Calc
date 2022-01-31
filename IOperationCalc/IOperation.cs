@@ -4,6 +4,6 @@ namespace IOperationCalc
 {
     public interface IOperation
     {
-        public double  Evaluate(double firstNum,double secondNum);
+        public double  Evaluate();
     } 
 }

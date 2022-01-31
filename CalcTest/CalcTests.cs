@@ -68,15 +68,6 @@ namespace CalcTest
 
             Assert.AreEqual(expected, actual);
         }
-        [TestCase(8, 2, 4)]
-        [TestCase(25, 5, 5)]
-        [TestCase(36, 6, 6)]
-        [TestCase(330, 3, 110)]
-        public void Divide_Numbers_ReturnsResult(double a, double b, double expeceted)
-        {
-            var calc = new Div();
-            double actual = calc.Evaluate(a, b);
-            Assert.AreEqual(expeceted, actual);
-        }
+
     }
 }
