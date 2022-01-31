@@ -8,8 +8,6 @@ namespace CalcConsole
     {
         static void Main(string[] args)
         {
-            var calcDiv = new Div();
-            double result;
 
             while (true)
             {
@@ -34,27 +32,25 @@ namespace CalcConsole
                         Console.Write("Введите 2 число ");
                         secondNum = double.Parse(Console.ReadLine());
                     }
-                    result = calcDiv.Evaluate(firstNum, secondNum);
-                    System.Console.WriteLine("CalcDiv result {0}/{1}={2}",firstNum,secondNum,result);
-
                     var calc = new CalcActions();
+                    var calcDiv = new Div();
                     switch (action)
                     {
                         case "+":
-                            Console.WriteLine("Calc Action result {0}+{1}={2}", firstNum, secondNum, calc.Sum(firstNum, secondNum));
+                            Console.WriteLine("{0}+{1}={2}", firstNum, secondNum, calc.Sum(firstNum, secondNum));
                             break;
                         case "-":
-                            Console.WriteLine("Calc Action result {0}-{1}={2}", firstNum, secondNum, calc.Diff(firstNum, secondNum));
+                            Console.WriteLine("{0}-{1}={2}", firstNum, secondNum, calc.Diff(firstNum, secondNum));
                             break;
                         case "*":
-                            Console.WriteLine("Calc Action result {0}*{1}={2}", firstNum, secondNum, calc.Mult(firstNum, secondNum));
+                            Console.WriteLine("{0}*{1}={2}", firstNum, secondNum, calc.Mult(firstNum, secondNum));
                             break;
                         case "/":
                             try
                             {
                                 if (secondNum == 0)
                                     throw new DivideByZeroException();
-                                Console.WriteLine("Calc Action result {0}/{1}={2}", firstNum, secondNum, calc.Div(firstNum, secondNum));
+                                Console.WriteLine("{0}/{1}={2}", firstNum, secondNum, calcDiv.Evaluate(firstNum, secondNum));
                             }
                             catch (DivideByZeroException)
                             {
