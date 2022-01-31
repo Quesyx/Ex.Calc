@@ -31,6 +31,19 @@
           "bin/placeholder/CalcLib.dll": {}
         }
       },
+      "CalcSquare/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v5.0",
+        "dependencies": {
+          "IOperationCalc": "1.0.0"
+        },
+        "compile": {
+          "bin/placeholder/CalcSquare.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/CalcSquare.dll": {}
+        }
+      },
       "IOperationCalc/1.0.0": {
         "type": "project",
         "framework": ".NETCoreApp,Version=v5.0",
@@ -79,6 +92,11 @@
       "path": "../CalcLib/CalcLib.csproj",
       "msbuildProject": "../CalcLib/CalcLib.csproj"
     },
+    "CalcSquare/1.0.0": {
+      "type": "project",
+      "path": "../CalcSquare/CalcSquare.csproj",
+      "msbuildProject": "../CalcSquare/CalcSquare.csproj"
+    },
     "IOperationCalc/1.0.0": {
       "type": "project",
       "path": "../IOperationCalc/IOperationCalc.csproj",
@@ -89,6 +107,7 @@
     "net5.0": [
       "CalcDiv >= 1.0.0",
       "CalcLib >= 1.0.0",
+      "CalcSquare >= 1.0.0",
       "NUnit3TestAdapter >= 4.2.1"
     ]
   },
@@ -122,6 +141,9 @@
             },
             "/home/quesyx/Work/src/Ex.Calc/CalcLib/CalcLib.csproj": {
               "projectPath": "/home/quesyx/Work/src/Ex.Calc/CalcLib/CalcLib.csproj"
+            },
+            "/home/quesyx/Work/src/Ex.Calc/CalcSquare/CalcSquare.csproj": {
+              "projectPath": "/home/quesyx/Work/src/Ex.Calc/CalcSquare/CalcSquare.csproj"
             }
           }
         }

@@ -10,6 +10,7 @@
         "dependencies": {
           "CalcDiv": "1.0.0",
           "CalcLib": "1.0.0",
+          "CalcSquare": "1.0.0",
           "NUnit3TestAdapter": "4.2.1"
         },
         "runtime": {
@@ -28,6 +29,14 @@
       "CalcLib/1.0.0": {
         "runtime": {
           "CalcLib.dll": {}
+        }
+      },
+      "CalcSquare/1.0.0": {
+        "dependencies": {
+          "IOperationCalc": "1.0.0"
+        },
+        "runtime": {
+          "CalcSquare.dll": {}
         }
       },
       "IOperationCalc/1.0.0": {
@@ -56,6 +65,11 @@
       "sha512": ""
     },
     "CalcLib/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "CalcSquare/1.0.0": {
       "type": "project",
       "serviceable": false,
       "sha512": ""

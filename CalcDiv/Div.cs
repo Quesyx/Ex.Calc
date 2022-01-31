@@ -3,12 +3,14 @@ using IOperationCalc;
 
 namespace CalcDiv
 {
-    public class Div : IOperation
+    public class Div : IOpTwoArg
     {
-        public double firstNum,secondNum;
-        public double Evaluate()
+
+        public double Evaluate(double firstNum,double secondNum)
         {
             return firstNum/secondNum;
         }
+
+
     }
 }

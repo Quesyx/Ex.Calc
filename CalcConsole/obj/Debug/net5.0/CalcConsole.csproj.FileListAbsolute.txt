@@ -27,3 +27,5 @@
 /home/quesyx/Work/src/Ex.Calc/CalcConsole/bin/Debug/net5.0/IOperationCalc.dll
 /home/quesyx/Work/src/Ex.Calc/CalcConsole/bin/Debug/net5.0/CalcDiv.pdb
 /home/quesyx/Work/src/Ex.Calc/CalcConsole/bin/Debug/net5.0/IOperationCalc.pdb
+/home/quesyx/Work/src/Ex.Calc/CalcConsole/bin/Debug/net5.0/CalcSquare.dll
+/home/quesyx/Work/src/Ex.Calc/CalcConsole/bin/Debug/net5.0/CalcSquare.pdb
