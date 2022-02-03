@@ -3,7 +3,7 @@ using IOperationCalc;
 
 namespace CalcDiv
 {
-    public class Div : IOpTwoArg
+    public class Div : IOpWithOneArgorTwo
     {
 
         public double Evaluate(double firstNum,double secondNum)
@@ -11,6 +11,9 @@ namespace CalcDiv
             return firstNum/secondNum;
         }
 
-
+        public double Evaluate(double firstNum)
+        {
+            throw new NotImplementedException();
+        }
     }
 }

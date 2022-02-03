@@ -5,6 +5,7 @@ using CalcSquare;
 
 namespace CalcConsole
 {
+
     class Program
     {
         static void Main(string[] args)
@@ -36,6 +37,7 @@ namespace CalcConsole
                     var calc = new CalcActions();
                     var calcDiv = new Div();
                     var calcSqrt= new SquareRoot1();
+                    
 
                     switch (action)
                     {
