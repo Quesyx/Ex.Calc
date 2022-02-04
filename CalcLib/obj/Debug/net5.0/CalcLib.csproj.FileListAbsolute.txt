@@ -10,3 +10,6 @@
 /home/quesyx/Work/src/Ex.Calc/CalcLib/obj/Debug/net5.0/CalcLib.dll
 /home/quesyx/Work/src/Ex.Calc/CalcLib/obj/Debug/net5.0/ref/CalcLib.dll
 /home/quesyx/Work/src/Ex.Calc/CalcLib/obj/Debug/net5.0/CalcLib.pdb
+/home/quesyx/Work/src/Ex.Calc/CalcLib/bin/Debug/net5.0/IOperationCalc.dll
+/home/quesyx/Work/src/Ex.Calc/CalcLib/bin/Debug/net5.0/IOperationCalc.pdb
+/home/quesyx/Work/src/Ex.Calc/CalcLib/obj/Debug/net5.0/CalcLib.csproj.CopyComplete

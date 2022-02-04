@@ -2,6 +2,9 @@
 using CalcLib;
 using CalcDiv;
 using CalcSquare;
+using Calculator;
+using System.Collections.Generic;
+
 
 namespace CalcConsole
 {
@@ -11,22 +14,20 @@ namespace CalcConsole
         static void Main(string[] args)
         {
 
+
             while (true)
             {
                 try
                 {
                     double firstNum, secondNum = 0;
-                    string action;
+
+
 
                     Console.Write("Введите 1 число ");
                     firstNum = double.Parse(Console.ReadLine());
-                    if ((firstNum > 99999999999) || (firstNum == 0))
-                    {
-                        Console.WriteLine("Нельзя вводить число больше 999999999 и 0");
-                        Console.ReadLine();
-                        continue;
-                    }
-                    Console.Write("Введите действие (+, -, *, /, s(Корен)) ");
+        
+                    string action;
+                    Console.Write("Введите действие (+, -, *, /, s(Корень)) ");
                     action = Console.ReadLine();
                     Console.WriteLine();
                     if (action != "s")
@@ -34,11 +35,14 @@ namespace CalcConsole
                         Console.Write("Введите 2 число ");
                         secondNum = double.Parse(Console.ReadLine());
                     }
+
                     var calc = new CalcActions();
                     var calcDiv = new Div();
-                    var calcSqrt= new SquareRoot1();
-                    
-
+                    var calcSqrt = new SquareRoot1();
+                    var op= new Dictionary<string,object>();
+            var MathOp=new CalculatorOp();
+            MathOp.SetOperation(op);
+           op.Add("/",calcDiv.Evaluate(firstNum,secondNum));
                     switch (action)
                     {
                         case "+":
@@ -51,11 +55,12 @@ namespace CalcConsole
                             Console.WriteLine("{0}*{1}={2}", firstNum, secondNum, calc.Mult(firstNum, secondNum));
                             break;
                         case "/":
+                        op.Add("/",calcDiv.Evaluate(firstNum,secondNum));
                             try
-                            {
+                           {
                                 if (secondNum == 0)
                                     throw new DivideByZeroException();
-                                Console.WriteLine("{0}/{1}={2}", firstNum, secondNum, calcDiv.Evaluate(firstNum,secondNum));
+                                Console.WriteLine("{0}/{1}={2}", firstNum, secondNum);
                             }
                             catch (DivideByZeroException)
                             {
@@ -78,7 +83,8 @@ namespace CalcConsole
                 }
                 Console.ReadLine();
             }
-
         }
+
     }
 }
+

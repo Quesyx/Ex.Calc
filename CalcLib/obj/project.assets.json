@@ -1,11 +1,30 @@
 {
   "version": 3,
   "targets": {
-    "net5.0": {}
+    "net5.0": {
+      "IOperationCalc/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v5.0",
+        "compile": {
+          "bin/placeholder/IOperationCalc.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/IOperationCalc.dll": {}
+        }
+      }
+    }
   },
-  "libraries": {},
+  "libraries": {
+    "IOperationCalc/1.0.0": {
+      "type": "project",
+      "path": "../IOperationCalc/IOperationCalc.csproj",
+      "msbuildProject": "../IOperationCalc/IOperationCalc.csproj"
+    }
+  },
   "projectFileDependencyGroups": {
-    "net5.0": []
+    "net5.0": [
+      "IOperationCalc >= 1.0.0"
+    ]
   },
   "packageFolders": {
     "/home/quesyx/.nuget/packages/": {}
@@ -31,7 +50,11 @@
       "frameworks": {
         "net5.0": {
           "targetAlias": "net5.0",
-          "projectReferences": {}
+          "projectReferences": {
+            "/home/quesyx/Work/src/Ex.Calc/IOperationCalc/IOperationCalc.csproj": {
+              "projectPath": "/home/quesyx/Work/src/Ex.Calc/IOperationCalc/IOperationCalc.csproj"
+            }
+          }
         }
       },
       "warningProperties": {

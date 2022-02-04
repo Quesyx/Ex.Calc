@@ -1,5 +1,4 @@
 ﻿using System;
-
 namespace CalcLib
 {
     public class CalcActions

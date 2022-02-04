@@ -4,6 +4,7 @@
     <ProjectReference Include="..\CalcLib\CalcLib.csproj" />
     <ProjectReference Include="..\CalcDiv\CalcDiv.csproj" />
     <ProjectReference Include="..\CalcSquare\CalcSquare.csproj" />
+    <ProjectReference Include="..\Calculator\Calculator.csproj" />
   </ItemGroup>
 
   <ItemGroup>
