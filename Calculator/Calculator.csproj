@@ -2,6 +2,7 @@
 
   <ItemGroup>
     <ProjectReference Include="..\IOperationCalc\IOperationCalc.csproj" />
+    <ProjectReference Include="..\CalcDiv\CalcDiv.csproj" />
   </ItemGroup>
 
   <PropertyGroup>

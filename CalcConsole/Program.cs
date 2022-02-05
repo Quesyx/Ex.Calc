@@ -1,8 +1,10 @@
 ﻿using System;
 using CalcLib;
 using CalcDiv;
+using CalcMult;
 using CalcSquare;
 using Calculator;
+using IOperationCalc;
 using System.Collections.Generic;
 
 
@@ -11,6 +13,7 @@ namespace CalcConsole
 
     class Program
     {
+
         static void Main(string[] args)
         {
 
@@ -22,10 +25,9 @@ namespace CalcConsole
                     double firstNum, secondNum = 0;
 
 
-
                     Console.Write("Введите 1 число ");
                     firstNum = double.Parse(Console.ReadLine());
-        
+
                     string action;
                     Console.Write("Введите действие (+, -, *, /, s(Корень)) ");
                     action = Console.ReadLine();
@@ -38,11 +40,18 @@ namespace CalcConsole
 
                     var calc = new CalcActions();
                     var calcDiv = new Div();
+                    var calcMult = new Mult();
                     var calcSqrt = new SquareRoot1();
-                    var op= new Dictionary<string,object>();
-            var MathOp=new CalculatorOp();
-            MathOp.SetOperation(op);
-           op.Add("/",calcDiv.Evaluate(firstNum,secondNum));
+                    var calcOp = new CalculatorOp();
+                    calcOp.RegisteredOperations.Add("/", (IOpWithOneArgorTwo)calcDiv);
+                    var div = calcOp.Calculate("/", firstNum, secondNum);
+                    System.Console.WriteLine("{0}/{1}={2}", firstNum, secondNum, div);
+                    calc.DefineOperation("mod", (x, y) => x % y);
+                    var mod = calc.ComputeOperation("mod", firstNum, secondNum);
+                    calcOp.RegisteredOperations.Add("*", (IOpWithOneArgorTwo)calcMult);
+                    var mult = calcOp.Calculate("*", firstNum, secondNum);
+                    System.Console.WriteLine("{0}*{1}={2}", firstNum, secondNum, mult);
+
                     switch (action)
                     {
                         case "+":
@@ -55,12 +64,11 @@ namespace CalcConsole
                             Console.WriteLine("{0}*{1}={2}", firstNum, secondNum, calc.Mult(firstNum, secondNum));
                             break;
                         case "/":
-                        op.Add("/",calcDiv.Evaluate(firstNum,secondNum));
                             try
-                           {
+                            {
                                 if (secondNum == 0)
                                     throw new DivideByZeroException();
-                                Console.WriteLine("{0}/{1}={2}", firstNum, secondNum);
+                                Console.WriteLine("{0}/{1}={2}", firstNum, secondNum, calcDiv.Evaluate(firstNum, secondNum));
                             }
                             catch (DivideByZeroException)
                             {

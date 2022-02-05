@@ -31,3 +31,5 @@
 /home/quesyx/Work/src/Ex.Calc/CalcConsole/bin/Debug/net5.0/CalcSquare.pdb
 /home/quesyx/Work/src/Ex.Calc/CalcConsole/bin/Debug/net5.0/Calculator.dll
 /home/quesyx/Work/src/Ex.Calc/CalcConsole/bin/Debug/net5.0/Calculator.pdb
+/home/quesyx/Work/src/Ex.Calc/CalcConsole/bin/Debug/net5.0/CalcMult.dll
+/home/quesyx/Work/src/Ex.Calc/CalcConsole/bin/Debug/net5.0/CalcMult.pdb
