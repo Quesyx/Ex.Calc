@@ -23,7 +23,7 @@ namespace Calculator
   {
   
       var result =RegisteredOperations[op].Evaluate(op1);
-            System.Console.WriteLine(result);
+            System.Console.WriteLine($"({op1}){op}={result}");
 
   }
   
