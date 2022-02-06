@@ -43,14 +43,21 @@ namespace CalcConsole
                     var calcMult = new Mult();
                     var calcSqrt = new SquareRoot1();
                     var calcOp = new CalculatorOp();
+
                     calcOp.RegisteredOperations.Add("/", (IOpWithOneArgorTwo)calcDiv);
-                    var div = calcOp.Calculate("/", firstNum, secondNum);
-                    System.Console.WriteLine("{0}/{1}={2}", firstNum, secondNum, div);
-                    calc.DefineOperation("mod", (x, y) => x % y);
-                    var mod = calc.ComputeOperation("mod", firstNum, secondNum);
+                    var div = calcOp.Calculate("/", firstNum, secondNum); 
+
+                    //calc.DefineOperation("mod", (x, y) => x % y);
+                    //var mod = calc.ComputeOperation("mod", firstNum,secondNum);
+
                     calcOp.RegisteredOperations.Add("*", (IOpWithOneArgorTwo)calcMult);
                     var mult = calcOp.Calculate("*", firstNum, secondNum);
-                    System.Console.WriteLine("{0}*{1}={2}", firstNum, secondNum, mult);
+
+                calcOp.RegisteredOperations.Add("s", (IOpWithOneArgorTwo)calcSqrt);
+                    var sqrt = calcOp.Calculate("s", firstNum);
+
+
+
 
                     switch (action)
                     {
