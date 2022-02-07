@@ -12,7 +12,7 @@ namespace CalcMult
 
         public double Evaluate(double firstNum, double secondNum)
         {
-            return firstNum*secondNum;
+            return firstNum * secondNum;
         }
     }
 }
