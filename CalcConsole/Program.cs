@@ -23,10 +23,13 @@ namespace CalcConsole
             var calcOp = new CalculatorOp();
 
             calcOp.RegisteredOperations.Add("/", (IOpWithOneArgorTwo)calcDiv);
-     
+
+            calcOp.RegisteredOperations.Add("*", (IOpWithOneArgorTwo)calcMult);
+
+            calcOp.RegisteredOperations.Add("s", (IOpWithOneArgorTwo)calcSqrt);
+
             calc.DefineOperation("mod", (x, y) => x % y);
-       
-            calcOp.RegisteredOperations.Add("*", (IOpWithOneArgorTwo)calcMult);           
+
 
             while (true)
             {
@@ -34,7 +37,6 @@ namespace CalcConsole
                 {
                     double firstNum, secondNum = default;
 
-                    string action;
                     Console.Write("Введите 1 число ");
                     firstNum = double.Parse(Console.ReadLine());
                     if ((firstNum > 99999999999) || (firstNum == 0))
@@ -43,6 +45,7 @@ namespace CalcConsole
                         Console.ReadLine();
                         continue;
                     }
+                    string action;
                     Console.Write("Введите действие (+, -, *, /, s(Корен)) ");
                     action = Console.ReadLine();
                     Console.WriteLine();
