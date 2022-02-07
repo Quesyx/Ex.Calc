@@ -48,9 +48,9 @@ namespace CalcConsole
             {
                 try
                 {
-                    
-                
-             
+
+
+
                     double firstNum, secondNum = 0;
                     string action;
                     Console.Write("Введите 1 число ");
@@ -101,26 +101,26 @@ namespace CalcConsole
                         default:
                             Console.WriteLine("Ошибка, Некорректное действие!");
                             break;
-                    
-                    
+
+
                     }
                 }
-                   catch (Exception ex)
+                catch (Exception ex)
                 {
-                    
+
                     System.Console.WriteLine(ex.Message);
                 }
-                
-                }
-                
-                
+
             }
-        
 
 
         }
 
+
+
     }
+
+}
 
 
 
