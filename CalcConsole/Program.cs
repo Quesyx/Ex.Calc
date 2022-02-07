@@ -80,14 +80,14 @@ namespace CalcConsole
                             Console.WriteLine("{0}-{1}={2}", firstNum, secondNum, calc.Diff(firstNum, secondNum));
                             break;
                         case "*":
-                            Console.WriteLine("{0}*{1}={2}", firstNum, secondNum, calc.Mult(firstNum, secondNum));
+                            calcOp.Calculate("*", firstVal, secondVal);
                             break;
                         case "/":
                             try
                             {
                                 if (secondNum == 0)
                                     throw new DivideByZeroException();
-                                Console.WriteLine("{0}/{1}={2}", firstNum, secondNum, calcDiv.Evaluate(firstNum, secondNum));
+                                calcOp.Calculate("/", firstVal, secondVal);
                             }
                             catch (DivideByZeroException)
                             {
@@ -96,7 +96,7 @@ namespace CalcConsole
                             }
                             break;
                         case "s":
-                            Console.WriteLine("Корень({0})={1}", firstNum, calcSqrt.Evaluate(firstNum));
+                            calcOp.Calculate("s", firstVal);
                             break;
                         default:
                             Console.WriteLine("Ошибка, Некорректное действие!");
