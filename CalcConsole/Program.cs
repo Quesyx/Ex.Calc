@@ -16,62 +16,111 @@ namespace CalcConsole
 
         static void Main(string[] args)
         {
+            double firstVal, secondVal = default;
+
+            var calc = new CalcActions();
+            var calcDiv = new Div();
+            var calcMult = new Mult();
+            var calcSqrt = new SquareRoot1();
+            var calcOp = new CalculatorOp();
+            Console.Write("Введите 1 число ");
+            firstVal = double.Parse(Console.ReadLine());
+            Console.Write("Введите 2 число ");
+            secondVal = double.Parse(Console.ReadLine());
+
+            calcOp.RegisteredOperations.Add("/", (IOpWithOneArgorTwo)calcDiv);
+            var div = calcOp.Calculate("/", firstVal, secondVal);
+
+            calc.DefineOperation("mod", (x, y) => x % y);
+            var mod = calc.ComputeOperation("mod", firstVal, secondVal);
+
+            calcOp.RegisteredOperations.Add("*", (IOpWithOneArgorTwo)calcMult);
+            var mult = calcOp.Calculate("*", firstVal, secondVal);
+
+            calcOp.RegisteredOperations.Add("s", (IOpWithOneArgorTwo)calcSqrt);
+            var sqrt = calcOp.Calculate("s", firstVal);
+
 
 
 
 
             while (true)
             {
-
-                double firstVal, secondVal = default;
-                System.Console.WriteLine("цифра 1-операция с одним числом\nцифра 2-операция с двумя числами");
-                string chooseNumbers = Console.ReadLine();
-
-                if (chooseNumbers == "1")
+                try
                 {
+                    
+                
+             
+                    double firstNum, secondNum = 0;
+                    string action;
+                    Console.Write("Введите 1 число ");
+                    firstNum = double.Parse(Console.ReadLine());
+                    if ((firstNum > 99999999999) || (firstNum == 0))
+                    {
+                        Console.WriteLine("Нельзя вводить число больше 999999999 и 0");
+                        Console.ReadLine();
+                        continue;
+                    }
+                    Console.Write("Введите действие (+, -, *, /, s(Корен)) ");
+                    action = Console.ReadLine();
+                    Console.WriteLine();
+                    if (action != "s")
+                    {
+                        Console.Write("Введите 2 число ");
+                        secondNum = double.Parse(Console.ReadLine());
+                    }
 
 
+                    switch (action)
+                    {
+                        case "+":
+                            Console.WriteLine("{0}+{1}={2}", firstNum, secondNum, calc.Sum(firstNum, secondNum));
+                            break;
+                        case "-":
+                            Console.WriteLine("{0}-{1}={2}", firstNum, secondNum, calc.Diff(firstNum, secondNum));
+                            break;
+                        case "*":
+                            Console.WriteLine("{0}*{1}={2}", firstNum, secondNum, calc.Mult(firstNum, secondNum));
+                            break;
+                        case "/":
+                            try
+                            {
+                                if (secondNum == 0)
+                                    throw new DivideByZeroException();
+                                Console.WriteLine("{0}/{1}={2}", firstNum, secondNum, calcDiv.Evaluate(firstNum, secondNum));
+                            }
+                            catch (DivideByZeroException)
+                            {
+                                Console.WriteLine("Делить на ноль нельзя");
 
-
-                    System.Console.WriteLine("Введите 1 число");
-                    firstVal = double.Parse(Console.ReadLine());
-                    Console.Clear();
-                    var calcOp = new CalculatorOp();
-                    var calcSqrt = new SquareRoot1();
-                    calcOp.RegisteredOperations.Add("s", (IOpWithOneArgorTwo)calcSqrt);
-                    var sqrt = calcOp.Calculate("s", firstVal);
-
-
+                            }
+                            break;
+                        case "s":
+                            Console.WriteLine("Корень({0})={1}", firstNum, calcSqrt.Evaluate(firstNum));
+                            break;
+                        default:
+                            Console.WriteLine("Ошибка, Некорректное действие!");
+                            break;
+                    
+                    
+                    }
                 }
-                else if (chooseNumbers == "2")
+                   catch (Exception ex)
                 {
-
-                    var calcOp = new CalculatorOp();
-                    var calcDiv = new Div();
-                    var calcMult = new Mult();
-                    var calc = new CalcActions();
-                    System.Console.WriteLine("Введите 1 число");
-                    firstVal = double.Parse(Console.ReadLine());
-                    System.Console.WriteLine("Введите 2 число");
-                    secondVal = double.Parse(Console.ReadLine());
-                    calcOp.RegisteredOperations.Add("/", (IOpWithOneArgorTwo)calcDiv);
-                    var div = calcOp.Calculate("/", firstVal, secondVal);
-
-                    calc.DefineOperation("mod", (x, y) => x % y);
-                    var mod = calc.ComputeOperation("mod", firstVal, secondVal);
-
-                    calcOp.RegisteredOperations.Add("*", (IOpWithOneArgorTwo)calcMult);
-                    var mult = calcOp.Calculate("*", firstVal, secondVal);
-
-
+                    
+                    System.Console.WriteLine(ex.Message);
                 }
-                Console.ReadLine();
+                
+                }
+                
+                
             }
+        
 
 
         }
 
     }
-}
+
 
 
