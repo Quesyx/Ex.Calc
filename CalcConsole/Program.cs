@@ -16,42 +16,24 @@ namespace CalcConsole
 
         static void Main(string[] args)
         {
-            double firstVal, secondVal = default;
-
             var calc = new CalcActions();
             var calcDiv = new Div();
             var calcMult = new Mult();
             var calcSqrt = new SquareRoot1();
             var calcOp = new CalculatorOp();
-            Console.Write("Введите 1 число ");
-            firstVal = double.Parse(Console.ReadLine());
-            Console.Write("Введите 2 число ");
-            secondVal = double.Parse(Console.ReadLine());
 
             calcOp.RegisteredOperations.Add("/", (IOpWithOneArgorTwo)calcDiv);
-            var div = calcOp.Calculate("/", firstVal, secondVal);
-
+     
             calc.DefineOperation("mod", (x, y) => x % y);
-            var mod = calc.ComputeOperation("mod", firstVal, secondVal);
-
-            calcOp.RegisteredOperations.Add("*", (IOpWithOneArgorTwo)calcMult);
-            var mult = calcOp.Calculate("*", firstVal, secondVal);
-
-            calcOp.RegisteredOperations.Add("s", (IOpWithOneArgorTwo)calcSqrt);
-            var sqrt = calcOp.Calculate("s", firstVal);
-
-
-
-
+       
+            calcOp.RegisteredOperations.Add("*", (IOpWithOneArgorTwo)calcMult);           
 
             while (true)
             {
                 try
                 {
+                    double firstNum, secondNum = default;
 
-
-
-                    double firstNum, secondNum = 0;
                     string action;
                     Console.Write("Введите 1 число ");
                     firstNum = double.Parse(Console.ReadLine());
@@ -80,14 +62,14 @@ namespace CalcConsole
                             Console.WriteLine("{0}-{1}={2}", firstNum, secondNum, calc.Diff(firstNum, secondNum));
                             break;
                         case "*":
-                            calcOp.Calculate("*", firstVal, secondVal);
+                            calcOp.Calculate("*", firstNum, secondNum);
                             break;
                         case "/":
                             try
                             {
                                 if (secondNum == 0)
                                     throw new DivideByZeroException();
-                                calcOp.Calculate("/", firstVal, secondVal);
+                                calcOp.Calculate("/", firstNum, secondNum);
                             }
                             catch (DivideByZeroException)
                             {
@@ -96,7 +78,7 @@ namespace CalcConsole
                             }
                             break;
                         case "s":
-                            calcOp.Calculate("s", firstVal);
+                            calcOp.Calculate("s", firstNum);
                             break;
                         default:
                             Console.WriteLine("Ошибка, Некорректное действие!");
