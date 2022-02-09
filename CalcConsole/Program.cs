@@ -39,9 +39,9 @@ namespace CalcConsole
 
                     Console.Write("Введите 1 число ");
                     firstNum = double.Parse(Console.ReadLine());
-                    if ((firstNum > 99999999999) || (firstNum == 0))
+                    if ((firstNum > 99999999999))
                     {
-                        Console.WriteLine("Нельзя вводить число больше 999999999 и 0");
+                        Console.WriteLine("Нельзя вводить число больше 999999999");
                         Console.ReadLine();
                         continue;
                     }
@@ -68,17 +68,7 @@ namespace CalcConsole
                             calcOp.Calculate("*", firstNum, secondNum);
                             break;
                         case "/":
-                            try
-                            {
-                                if (secondNum == 0)
-                                    throw new DivideByZeroException();
-                                calcOp.Calculate("/", firstNum, secondNum);
-                            }
-                            catch (DivideByZeroException)
-                            {
-                                Console.WriteLine("Делить на ноль нельзя");
-
-                            }
+                            calcOp.Calculate("/", firstNum, secondNum);
                             break;
                         case "s":
                             calcOp.Calculate("s", firstNum);

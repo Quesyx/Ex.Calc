@@ -6,5 +6,6 @@ namespace IOperationCalc
     {
         public double Evaluate(double firstNum);
         public double Evaluate(double firstNum, double secondNum);
+
     }
 }

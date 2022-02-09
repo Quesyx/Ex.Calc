@@ -8,17 +8,7 @@ namespace CalcDiv
 
         public double Evaluate(double firstNum, double secondNum)
         {
-            try
-            {
-                if (secondNum == 0)
-                    throw new DivideByZeroException();
-
-            }
-            catch (DivideByZeroException)
-            {
-                Console.WriteLine("Делить на ноль нельзя");
-
-            }
+ 
             return firstNum / secondNum;
         }
 

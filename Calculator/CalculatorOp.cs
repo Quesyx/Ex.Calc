@@ -14,7 +14,7 @@ namespace Calculator
 
         {
 
-            var result = RegisteredOperations[op].Evaluate(op1, op2);
+            var result  = RegisteredOperations[op].Evaluate(op1, op2);
             System.Console.WriteLine($"{op1}{op}{op2}={result}");
 
         }
@@ -34,6 +34,16 @@ namespace Calculator
         {
             if (!RegisteredOperations.ContainsKey(op))
                 throw new ArgumentException(string.Format("Operation {0} is invalid", op));
+                   try
+            {
+                if (op2 == 0)
+                    throw new DivideByZeroException();
+
+            }
+            catch (DivideByZeroException)
+            {
+                Console.WriteLine("Делить или умножать на ноль нельзя!");
+            }
             Call(op, op1, op2);
             return RegisteredOperations[op].Evaluate(op1, op2);
 
