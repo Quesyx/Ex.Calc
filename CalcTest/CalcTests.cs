@@ -1,46 +1,21 @@
 using NUnit.Framework;
-using CalcLib;
 using CalcDiv;
+using CalcMult;
+using CalcSquare;
 namespace CalcTest
 {
     [TestFixture]
     public class CalcTests
     {
-        [TestCase(5, 7, 12)]
-        [TestCase(1, 2.5, 3.5)]
-        [TestCase(100, -1, 99)]
-        [TestCase(10, -100, -90)]
-        public void Sum_Numbers_ReturnsResult(double a, double b, double expected)
-        {
-            var calc = new CalcActions();
-
-            // Act
-            var actual = calc.Sum(a, b);
-
-            // Assert
-            Assert.AreEqual(expected, actual);
-        }
-        [TestCase(8, 5, 3)]
-        [TestCase(9, 12, -3)]
-        [TestCase(25, 20, 5)]
-        [TestCase(10, 2, 8)]
-        public static void Diff_Numbers_ReturnsDifference(double a, double b, double expected)
-        {
-            var calc = new CalcActions();
-
-            double actual = calc.Diff(a, b);
-
-            Assert.AreEqual(expected, actual);
-        }
         [TestCase(2, 5, 10)]
         [TestCase(5, 3, 15)]
         [TestCase(12, 10, 120)]
         [TestCase(10, 3, 30)]
         public void Multiply_Numbers_ReturnsProduct(double a, double b, double expected)
         {
-            var calc = new CalcActions();
+            var calc = new Mult();
 
-            var actual = calc.Mult(a, b);
+            var actual = calc.Evaluate(a, b);
 
             Assert.AreEqual(expected, actual);
         }
@@ -50,9 +25,9 @@ namespace CalcTest
         [TestCase(220, 2, 110)]
         public void Divide_Numbers_ReturnsQuotient(double a, double b, double expected)
         {
-            var calc = new CalcActions();
+            var calc = new Div();
 
-            double actual = calc.Div(a, b);
+            double actual = calc.Evaluate(a, b);
 
             Assert.AreEqual(expected, actual);
         }
@@ -62,9 +37,9 @@ namespace CalcTest
         [TestCase(16, 4)]
         public void SquareRoot_Number_ReturnsResult(double d, double expected)
         {
-            var calc = new CalcActions();
+            var calc = new SquareRoot1();
 
-            double actual = calc.SquareRoot(d);
+            double actual = calc.Evaluate(d);
 
             Assert.AreEqual(expected, actual);
         }

@@ -14,8 +14,9 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\CalcLib\CalcLib.csproj" />
     <ProjectReference Include="..\CalcDiv\CalcDiv.csproj" />
+    <ProjectReference Include="..\CalcMult\CalcMult.csproj" />
+    <ProjectReference Include="..\CalcSquare\CalcSquare.csproj" />
   </ItemGroup>
 
 </Project>

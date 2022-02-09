@@ -9,9 +9,10 @@
       "CalcConsole/1.0.0": {
         "dependencies": {
           "CalcDiv": "1.0.0",
-          "CalcLib": "1.0.0",
+          "CalcMinus": "1.0.0",
           "CalcMult": "1.0.0",
           "CalcSquare": "1.0.0",
+          "CalcSum": "1.0.0",
           "Calculator": "1.0.0",
           "NUnit3TestAdapter": "4.2.1"
         },
@@ -28,12 +29,12 @@
           "CalcDiv.dll": {}
         }
       },
-      "CalcLib/1.0.0": {
+      "CalcMinus/1.0.0": {
         "dependencies": {
           "IOperationCalc": "1.0.0"
         },
         "runtime": {
-          "CalcLib.dll": {}
+          "CalcMinus.dll": {}
         }
       },
       "CalcMult/1.0.0": {
@@ -50,6 +51,14 @@
         },
         "runtime": {
           "CalcSquare.dll": {}
+        }
+      },
+      "CalcSum/1.0.0": {
+        "dependencies": {
+          "IOperationCalc": "1.0.0"
+        },
+        "runtime": {
+          "CalcSum.dll": {}
         }
       },
       "Calculator/1.0.0": {
@@ -86,7 +95,7 @@
       "serviceable": false,
       "sha512": ""
     },
-    "CalcLib/1.0.0": {
+    "CalcMinus/1.0.0": {
       "type": "project",
       "serviceable": false,
       "sha512": ""
@@ -97,6 +106,11 @@
       "sha512": ""
     },
     "CalcSquare/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "CalcSum/1.0.0": {
       "type": "project",
       "serviceable": false,
       "sha512": ""

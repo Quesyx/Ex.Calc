@@ -1,11 +1,12 @@
 <Project Sdk="Microsoft.NET.Sdk">
 
   <ItemGroup>
-    <ProjectReference Include="..\CalcLib\CalcLib.csproj" />
     <ProjectReference Include="..\CalcDiv\CalcDiv.csproj" />
     <ProjectReference Include="..\CalcSquare\CalcSquare.csproj" />
     <ProjectReference Include="..\Calculator\Calculator.csproj" />
     <ProjectReference Include="..\CalcMult\CalcMult.csproj" />
+    <ProjectReference Include="..\CalcSum\CalcSum.csproj" />
+    <ProjectReference Include="..\CalcMinus\CalcMinus.csproj" />
   </ItemGroup>
 
   <ItemGroup>

@@ -1,11 +1,11 @@
 ﻿using System;
-using CalcLib;
+using CalcSum;
+using CalcMinus;
 using CalcDiv;
 using CalcMult;
 using CalcSquare;
 using Calculator;
 using IOperationCalc;
-using System.Collections.Generic;
 
 
 namespace CalcConsole
@@ -16,11 +16,16 @@ namespace CalcConsole
 
         static void Main(string[] args)
         {
-            var calc = new CalcActions();
+            var calcSum = new Sum();
+            var calcMinus = new Minus();
             var calcDiv = new Div();
             var calcMult = new Mult();
             var calcSqrt = new SquareRoot1();
             var calcOp = new CalculatorOp();
+
+            calcOp.RegisteredOperations.Add("+", (IOpWithOneArgorTwo)calcSum);
+
+            calcOp.RegisteredOperations.Add("-", (IOpWithOneArgorTwo)calcMinus);
 
             calcOp.RegisteredOperations.Add("/", (IOpWithOneArgorTwo)calcDiv);
 
@@ -28,7 +33,6 @@ namespace CalcConsole
 
             calcOp.RegisteredOperations.Add("s", (IOpWithOneArgorTwo)calcSqrt);
 
-            calc.DefineOperation("mod", (x, y) => x % y);
 
 
             while (true)
@@ -46,39 +50,18 @@ namespace CalcConsole
                         continue;
                     }
                     string action;
-                    Console.Write("Введите действие (+, -, *, /, s(Корен)) ");
+                    Console.Write("Введите действие (+,*,-,/,s(корень)) ");
                     action = Console.ReadLine();
                     Console.WriteLine();
-                    if (action != "s")
+                    if (action == "s")
                     {
-                        Console.Write("Введите 2 число ");
-                        secondNum = double.Parse(Console.ReadLine());
+                        calcOp.Calculate(action, firstNum);
                     }
 
+                    Console.Write("Введите 2 число ");
+                    secondNum = double.Parse(Console.ReadLine());
+                    calcOp.Calculate(action, firstNum, secondNum);
 
-                    switch (action)
-                    {
-                        case "+":
-                            Console.WriteLine("{0}+{1}={2}", firstNum, secondNum, calc.Sum(firstNum, secondNum));
-                            break;
-                        case "-":
-                            Console.WriteLine("{0}-{1}={2}", firstNum, secondNum, calc.Diff(firstNum, secondNum));
-                            break;
-                        case "*":
-                            calcOp.Calculate("*", firstNum, secondNum);
-                            break;
-                        case "/":
-                            calcOp.Calculate("/", firstNum, secondNum);
-                            break;
-                        case "s":
-                            calcOp.Calculate("s", firstNum);
-                            break;
-                        default:
-                            Console.WriteLine("Ошибка, Некорректное действие!");
-                            break;
-
-
-                    }
                 }
                 catch (Exception ex)
                 {

@@ -29,14 +29,17 @@
               "/home/quesyx/Work/src/Ex.Calc/CalcDiv/CalcDiv.csproj": {
                 "projectPath": "/home/quesyx/Work/src/Ex.Calc/CalcDiv/CalcDiv.csproj"
               },
-              "/home/quesyx/Work/src/Ex.Calc/CalcLib/CalcLib.csproj": {
-                "projectPath": "/home/quesyx/Work/src/Ex.Calc/CalcLib/CalcLib.csproj"
+              "/home/quesyx/Work/src/Ex.Calc/CalcMinus/CalcMinus.csproj": {
+                "projectPath": "/home/quesyx/Work/src/Ex.Calc/CalcMinus/CalcMinus.csproj"
               },
               "/home/quesyx/Work/src/Ex.Calc/CalcMult/CalcMult.csproj": {
                 "projectPath": "/home/quesyx/Work/src/Ex.Calc/CalcMult/CalcMult.csproj"
               },
               "/home/quesyx/Work/src/Ex.Calc/CalcSquare/CalcSquare.csproj": {
                 "projectPath": "/home/quesyx/Work/src/Ex.Calc/CalcSquare/CalcSquare.csproj"
+              },
+              "/home/quesyx/Work/src/Ex.Calc/CalcSum/CalcSum.csproj": {
+                "projectPath": "/home/quesyx/Work/src/Ex.Calc/CalcSum/CalcSum.csproj"
               },
               "/home/quesyx/Work/src/Ex.Calc/Calculator/Calculator.csproj": {
                 "projectPath": "/home/quesyx/Work/src/Ex.Calc/Calculator/Calculator.csproj"
@@ -134,14 +137,14 @@
         }
       }
     },
-    "/home/quesyx/Work/src/Ex.Calc/CalcLib/CalcLib.csproj": {
+    "/home/quesyx/Work/src/Ex.Calc/CalcMinus/CalcMinus.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "/home/quesyx/Work/src/Ex.Calc/CalcLib/CalcLib.csproj",
-        "projectName": "CalcLib",
-        "projectPath": "/home/quesyx/Work/src/Ex.Calc/CalcLib/CalcLib.csproj",
+        "projectUniqueName": "/home/quesyx/Work/src/Ex.Calc/CalcMinus/CalcMinus.csproj",
+        "projectName": "CalcMinus",
+        "projectPath": "/home/quesyx/Work/src/Ex.Calc/CalcMinus/CalcMinus.csproj",
         "packagesPath": "/home/quesyx/.nuget/packages/",
-        "outputPath": "/home/quesyx/Work/src/Ex.Calc/CalcLib/obj/",
+        "outputPath": "/home/quesyx/Work/src/Ex.Calc/CalcMinus/obj/",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "/home/quesyx/.nuget/NuGet/NuGet.Config"
@@ -254,6 +257,62 @@
         "projectPath": "/home/quesyx/Work/src/Ex.Calc/CalcSquare/CalcSquare.csproj",
         "packagesPath": "/home/quesyx/.nuget/packages/",
         "outputPath": "/home/quesyx/Work/src/Ex.Calc/CalcSquare/obj/",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "/home/quesyx/.nuget/NuGet/NuGet.Config"
+        ],
+        "originalTargetFrameworks": [
+          "net5.0"
+        ],
+        "sources": {
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net5.0": {
+            "targetAlias": "net5.0",
+            "projectReferences": {
+              "/home/quesyx/Work/src/Ex.Calc/IOperationCalc/IOperationCalc.csproj": {
+                "projectPath": "/home/quesyx/Work/src/Ex.Calc/IOperationCalc/IOperationCalc.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net5.0": {
+          "targetAlias": "net5.0",
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "/usr/share/dotnet/sdk/5.0.404/RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "/home/quesyx/Work/src/Ex.Calc/CalcSum/CalcSum.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "/home/quesyx/Work/src/Ex.Calc/CalcSum/CalcSum.csproj",
+        "projectName": "CalcSum",
+        "projectPath": "/home/quesyx/Work/src/Ex.Calc/CalcSum/CalcSum.csproj",
+        "packagesPath": "/home/quesyx/.nuget/packages/",
+        "outputPath": "/home/quesyx/Work/src/Ex.Calc/CalcSum/obj/",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "/home/quesyx/.nuget/NuGet/NuGet.Config"

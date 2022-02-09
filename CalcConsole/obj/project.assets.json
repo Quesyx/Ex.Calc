@@ -21,17 +21,17 @@
           "bin/placeholder/CalcDiv.dll": {}
         }
       },
-      "CalcLib/1.0.0": {
+      "CalcMinus/1.0.0": {
         "type": "project",
         "framework": ".NETCoreApp,Version=v5.0",
         "dependencies": {
           "IOperationCalc": "1.0.0"
         },
         "compile": {
-          "bin/placeholder/CalcLib.dll": {}
+          "bin/placeholder/CalcMinus.dll": {}
         },
         "runtime": {
-          "bin/placeholder/CalcLib.dll": {}
+          "bin/placeholder/CalcMinus.dll": {}
         }
       },
       "CalcMult/1.0.0": {
@@ -58,6 +58,19 @@
         },
         "runtime": {
           "bin/placeholder/CalcSquare.dll": {}
+        }
+      },
+      "CalcSum/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v5.0",
+        "dependencies": {
+          "IOperationCalc": "1.0.0"
+        },
+        "compile": {
+          "bin/placeholder/CalcSum.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/CalcSum.dll": {}
         }
       },
       "Calculator/1.0.0": {
@@ -117,10 +130,10 @@
       "path": "../CalcDiv/CalcDiv.csproj",
       "msbuildProject": "../CalcDiv/CalcDiv.csproj"
     },
-    "CalcLib/1.0.0": {
+    "CalcMinus/1.0.0": {
       "type": "project",
-      "path": "../CalcLib/CalcLib.csproj",
-      "msbuildProject": "../CalcLib/CalcLib.csproj"
+      "path": "../CalcMinus/CalcMinus.csproj",
+      "msbuildProject": "../CalcMinus/CalcMinus.csproj"
     },
     "CalcMult/1.0.0": {
       "type": "project",
@@ -131,6 +144,11 @@
       "type": "project",
       "path": "../CalcSquare/CalcSquare.csproj",
       "msbuildProject": "../CalcSquare/CalcSquare.csproj"
+    },
+    "CalcSum/1.0.0": {
+      "type": "project",
+      "path": "../CalcSum/CalcSum.csproj",
+      "msbuildProject": "../CalcSum/CalcSum.csproj"
     },
     "Calculator/1.0.0": {
       "type": "project",
@@ -146,9 +164,10 @@
   "projectFileDependencyGroups": {
     "net5.0": [
       "CalcDiv >= 1.0.0",
-      "CalcLib >= 1.0.0",
+      "CalcMinus >= 1.0.0",
       "CalcMult >= 1.0.0",
       "CalcSquare >= 1.0.0",
+      "CalcSum >= 1.0.0",
       "Calculator >= 1.0.0",
       "NUnit3TestAdapter >= 4.2.1"
     ]
@@ -181,14 +200,17 @@
             "/home/quesyx/Work/src/Ex.Calc/CalcDiv/CalcDiv.csproj": {
               "projectPath": "/home/quesyx/Work/src/Ex.Calc/CalcDiv/CalcDiv.csproj"
             },
-            "/home/quesyx/Work/src/Ex.Calc/CalcLib/CalcLib.csproj": {
-              "projectPath": "/home/quesyx/Work/src/Ex.Calc/CalcLib/CalcLib.csproj"
+            "/home/quesyx/Work/src/Ex.Calc/CalcMinus/CalcMinus.csproj": {
+              "projectPath": "/home/quesyx/Work/src/Ex.Calc/CalcMinus/CalcMinus.csproj"
             },
             "/home/quesyx/Work/src/Ex.Calc/CalcMult/CalcMult.csproj": {
               "projectPath": "/home/quesyx/Work/src/Ex.Calc/CalcMult/CalcMult.csproj"
             },
             "/home/quesyx/Work/src/Ex.Calc/CalcSquare/CalcSquare.csproj": {
               "projectPath": "/home/quesyx/Work/src/Ex.Calc/CalcSquare/CalcSquare.csproj"
+            },
+            "/home/quesyx/Work/src/Ex.Calc/CalcSum/CalcSum.csproj": {
+              "projectPath": "/home/quesyx/Work/src/Ex.Calc/CalcSum/CalcSum.csproj"
             },
             "/home/quesyx/Work/src/Ex.Calc/Calculator/Calculator.csproj": {
               "projectPath": "/home/quesyx/Work/src/Ex.Calc/Calculator/Calculator.csproj"

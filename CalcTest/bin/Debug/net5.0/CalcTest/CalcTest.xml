@@ -1,2 +1,0 @@
-<?xml version="1.0" encoding="utf-8" standalone="no"?>
-<command-line><![CDATA[/home/quesyx/.nuget/packages/microsoft.testplatform.testhost/16.9.4/lib/netcoreapp2.1/testhost.dll --port 44695 --endpoint 127.0.0.1:044695 --role client --parentprocessid 94074 --telemetryoptedin false]]></command-line>

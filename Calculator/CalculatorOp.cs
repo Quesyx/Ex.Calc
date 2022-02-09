@@ -1,7 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
 using IOperationCalc;
-using CalcDiv;
 namespace Calculator
 {
     public class CalculatorOp
@@ -14,7 +13,7 @@ namespace Calculator
 
         {
 
-            var result  = RegisteredOperations[op].Evaluate(op1, op2);
+            var result = RegisteredOperations[op].Evaluate(op1, op2);
             System.Console.WriteLine($"{op1}{op}{op2}={result}");
 
         }
@@ -34,7 +33,7 @@ namespace Calculator
         {
             if (!RegisteredOperations.ContainsKey(op))
                 throw new ArgumentException(string.Format("Operation {0} is invalid", op));
-                   try
+            try
             {
                 if (op2 == 0)
                     throw new DivideByZeroException();
