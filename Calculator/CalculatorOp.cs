@@ -12,15 +12,6 @@ namespace Calculator
         {
             if (!RegisteredOperations.ContainsKey(op))
                 throw new ArgumentException(string.Format("Operation {0} is invalid", op));
-            try
-            {
-                if (op2 == 0)
-                    throw new DivideByZeroException();
-            }
-            catch (DivideByZeroException)
-            {
-                Console.WriteLine("Делить на ноль нельзя!");
-            }
             var result = RegisteredOperations[op].Evaluate(op1, op2);
             return result;
         }
