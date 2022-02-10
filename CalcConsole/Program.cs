@@ -16,31 +16,24 @@ namespace CalcConsole
 
         static void Main(string[] args)
         {
-            var calcSum = new Sum();
-            var calcMinus = new Minus();
-            var calcDiv = new Div();
-            var calcMult = new Mult();
-            var calcSqrt = new SquareRoot1();
+
             var calcOp = new CalculatorOp();
 
-            calcOp.RegisteredOperations.Add("+", (IOpWithOneArgorTwo)calcSum);
+            calcOp.RegisteredOperations.Add("+", (IOpWithOneArgorTwo)new Sum());
 
-            calcOp.RegisteredOperations.Add("-", (IOpWithOneArgorTwo)calcMinus);
+            calcOp.RegisteredOperations.Add("-", (IOpWithOneArgorTwo)new Minus());
 
-            calcOp.RegisteredOperations.Add("/", (IOpWithOneArgorTwo)calcDiv);
+            calcOp.RegisteredOperations.Add("/", (IOpWithOneArgorTwo)new Div());
 
-            calcOp.RegisteredOperations.Add("*", (IOpWithOneArgorTwo)calcMult);
+            calcOp.RegisteredOperations.Add("*", (IOpWithOneArgorTwo)new Mult());
 
-            calcOp.RegisteredOperations.Add("s", (IOpWithOneArgorTwo)calcSqrt);
-
-
+            calcOp.RegisteredOperations.Add("s", (IOpWithOneArgorTwo)new SquareRoot1());
 
             while (true)
             {
                 try
                 {
                     double firstNum, secondNum = default;
-
                     Console.Write("Введите 1 число ");
                     firstNum = double.Parse(Console.ReadLine());
                     if ((firstNum > 99999999999))
@@ -48,10 +41,9 @@ namespace CalcConsole
                         Console.WriteLine("Нельзя вводить число больше 999999999");
                         Console.ReadLine();
                         continue;
-                    }
-                    string action;
+                    }                   
                     Console.Write("Введите действие (+,*,-,/,s(корень)) ");
-                    action = Console.ReadLine();
+                    var action = Console.ReadLine();
                     Console.WriteLine();
                     if (action == "s")
                     {
@@ -71,10 +63,7 @@ namespace CalcConsole
 
             }
 
-
         }
-
-
 
     }
 
