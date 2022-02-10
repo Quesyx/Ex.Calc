@@ -7,10 +7,10 @@ namespace CalcDiv
     {
 
         public double Evaluate(double firstNum, double secondNum)
-        {      
-                if (secondNum == 0)
-                    throw new DivideByZeroException();
-            return firstNum / secondNum;            
+        {
+            if (secondNum == 0)
+                throw new DivideByZeroException();
+            return firstNum / secondNum;
         }
 
         public double Evaluate(double firstNum)

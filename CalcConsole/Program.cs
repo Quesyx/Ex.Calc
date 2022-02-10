@@ -10,10 +10,8 @@ using IOperationCalc;
 
 namespace CalcConsole
 {
-
     class Program
     {
-
         static void Main(string[] args)
         {
             var calcOp = new CalculatorOp();
