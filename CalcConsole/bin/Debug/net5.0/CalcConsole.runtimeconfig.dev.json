@@ -1,8 +1,0 @@
-{
-  "runtimeOptions": {
-    "additionalProbingPaths": [
-      "/home/quesyx/.dotnet/store/|arch|/|tfm|",
-      "/home/quesyx/.nuget/packages"
-    ]
-  }
-}

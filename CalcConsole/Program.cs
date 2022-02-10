@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using CalcSum;
 using CalcMinus;
 using CalcDiv;
@@ -16,29 +16,18 @@ namespace CalcConsole
 
         static void Main(string[] args)
         {
-
             var calcOp = new CalculatorOp();
-
-            calcOp.RegisteredOperations.Add("+", (IOpWithOneArgorTwo)new Sum());
-
-            calcOp.RegisteredOperations.Add("-", (IOpWithOneArgorTwo)new Minus());
-
-            calcOp.RegisteredOperations.Add("/", (IOpWithOneArgorTwo)new Div());
-
-            calcOp.RegisteredOperations.Add("*", (IOpWithOneArgorTwo)new Mult());
-
-            calcOp.RegisteredOperations.Add("s", (IOpWithOneArgorTwo)new SquareRoot1());
-
-
-
+            calcOp.RegisteredOperations.Add("+", new Sum());
+            calcOp.RegisteredOperations.Add("-", new Minus());
+            calcOp.RegisteredOperations.Add("/", new Div());
+            calcOp.RegisteredOperations.Add("*", new Mult());
+            calcOp.RegisteredOperations.Add("s", new SquareRoot1());
             while (true)
             {
                 try
                 {
-                    double firstNum, secondNum = default;
-
                     Console.Write("Введите 1 число ");
-                    firstNum = double.Parse(Console.ReadLine());
+                    var firstNum = double.Parse(Console.ReadLine());
                     if ((firstNum > 99999999999))
                     {
                         Console.WriteLine("Нельзя вводить число больше 999999999");
@@ -51,26 +40,18 @@ namespace CalcConsole
                     if (action == "s")
                     {
                         calcOp.Calculate(action, firstNum);
+                        System.Console.WriteLine($"{firstNum}{action}={calcOp.Calculate(action, firstNum)}");
                     }
-
                     Console.Write("Введите 2 число ");
-                    secondNum = double.Parse(Console.ReadLine());
-                    calcOp.Calculate(action, firstNum, secondNum);
-
+                    var secondNum = double.Parse(Console.ReadLine());
+                    System.Console.WriteLine($"{firstNum}{action}{secondNum}={calcOp.Calculate(action, firstNum, secondNum)}");
                 }
                 catch (Exception ex)
                 {
 
                     System.Console.WriteLine(ex.Message);
                 }
-
             }
-
         }
-
     }
-
 }
-
-
-

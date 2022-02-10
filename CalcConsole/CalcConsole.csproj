@@ -7,6 +7,7 @@
     <ProjectReference Include="..\CalcMult\CalcMult.csproj" />
     <ProjectReference Include="..\CalcSum\CalcSum.csproj" />
     <ProjectReference Include="..\CalcMinus\CalcMinus.csproj" />
+    <ProjectReference Include="..\IOperationCalc\IOperationCalc.csproj" />
   </ItemGroup>
 
   <ItemGroup>
