@@ -1,14 +1,6 @@
-using System;
-using CalcSum;
-using CalcMinus;
-using CalcDiv;
-using CalcMult;
-using CalcSquare;
-using Calculator;
-using IOperationCalc;
-
-
-namespace CalcConsole
+﻿using System;
+using ConsoleApp.src.Calculator;
+namespace ConsoleApp.src.CalculatorConsole  
 {
     class Program
     {
@@ -19,7 +11,7 @@ namespace CalcConsole
             calcOp.RegisteredOperations.Add("-", new Minus());
             calcOp.RegisteredOperations.Add("/", new Div());
             calcOp.RegisteredOperations.Add("*", new Mult());
-            calcOp.RegisteredOperations.Add("s", new SquareRoot1());
+            calcOp.RegisteredOperations.Add("s", new SquareRoot());
             while (true)
             {
                 try
@@ -38,11 +30,11 @@ namespace CalcConsole
                     if (action == "s")
                     {
                         calcOp.Calculate(action, firstNum);
-                        System.Console.WriteLine($"{firstNum}{action}={calcOp.Calculate(action, firstNum)}");
+                        Console.WriteLine($"{firstNum}{action}={calcOp.Calculate(action, firstNum)}");
                     }
                     Console.Write("Введите 2 число ");
                     var secondNum = double.Parse(Console.ReadLine());
-                    System.Console.WriteLine($"{firstNum}{action}{secondNum}={calcOp.Calculate(action, firstNum, secondNum)}");
+                    Console.WriteLine($"{firstNum}{action}{secondNum}={calcOp.Calculate(action, firstNum, secondNum)}");
                 }
                 catch (Exception ex)
                 {
@@ -50,6 +42,7 @@ namespace CalcConsole
                     System.Console.WriteLine(ex.Message);
                 }
             }
+
         }
     }
 }
