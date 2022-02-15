@@ -4,9 +4,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace ConsoleApp.src.Calculator
+namespace Calculator
 { 
-    class CalculatorOp
+    public class CalculatorOp
     {
         public readonly Dictionary<string, IMathOperation> RegisteredOperations = new();
         public double Calculate(string op, double op1, double op2)

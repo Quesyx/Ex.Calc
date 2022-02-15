@@ -1,7 +1,6 @@
 using NUnit.Framework;
-using ConsoleApp.src.Calculator;
 
-namespace CalculatorTests
+namespace Calculator.Tests
 {
     [TestFixture]
     public class CalcTests

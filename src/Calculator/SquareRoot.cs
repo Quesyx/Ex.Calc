@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace ConsoleApp.src.Calculator
+namespace Calculator
 {
    public class SquareRoot : IMathOperation
     {
