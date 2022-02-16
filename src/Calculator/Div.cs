@@ -15,6 +15,8 @@ namespace Calculator
 
         public double Evaluate(double firstNum, double secondNum)
         {
+            if (secondNum == 0)
+                throw new DivideByZeroException();
             return firstNum / secondNum;
         }
     }
