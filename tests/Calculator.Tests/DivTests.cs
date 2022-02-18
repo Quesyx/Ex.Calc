@@ -14,9 +14,11 @@ namespace Calculator.Tests
         {
             double v1 = 4;
             double v2 = 0;
+
             var calc = new Div();
 
-            double result = calc.Evaluate(v1, v2);
+            calc.Evaluate(v1, v2);
+
 
         }
         [TestMethod]
@@ -42,7 +44,7 @@ namespace Calculator.Tests
             Assert.AreEqual(expected, result);
         }
 
-
-
     }
+
 }
+
